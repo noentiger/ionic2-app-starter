@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <form (submit)="processForm()" [ngFormModel]="form">
+      <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Title</ion-label>
+        <ion-input ngControl="title" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Description</ion-label>
+        <ion-textarea ngControl="description" type="text"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+
+    <input type="file" (change)="initUpload(input)" #input />
+
+    <div padding>
+      <button block type="submit">Add Post</button>
+    </div>
+  </form>
+
+</ion-content>

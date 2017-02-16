@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Post Feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let post of posts">
+    <img class="card-image" [src]="post.images[0]" alt="" />
+    <div class="card-title" [innerHTML]="post.title"></div>
+    <div class="card-subtitle" [innerHTML]="post.description"></div>
+  </ion-card>
+
+</ion-content>
